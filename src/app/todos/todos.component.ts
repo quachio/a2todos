@@ -15,18 +15,24 @@ export class TodosComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.todos = this._todoService.getTodos();
+  }
+
+  /*
+  ngOnInit() {
     this.todos = [
       {
         text: 'Pickup kids at school'
       },
       {
         text: 'Meeting with boos'
-      },
+      }, 
       {
         text: 'Dinner with wife'
       }
     ];
   }
+  */
 
   addTodo() {
     console.log(this.text);
